@@ -41,3 +41,30 @@ console.log(Object.keys(tinderUser)); // Gives Output as an array which can easi
 console.log(Object.values(tinderUser));
 console.log(Object.entries(tinderUser));  // nested array as output.
 console.log(tinderUser.hasOwnProperty('isLoggedIn'));
+
+const course = {
+    coursename: "js in hindi",
+    price: "999",
+    courseInstructor: "Hitesh"
+}
+
+// course.courseInstructor
+const {courseInstructor:instructor} = course;
+//console.log(courseInstructor);
+console.log(instructor);   // Object De-Structuring.
+
+// const navbar = ({company}) => {  //Whenever you see curly braces syntax it means de-structuring is being done.
+
+// }
+// navbar(company = "Google");
+
+// {
+//     "name": "Piyush",
+//     "coursename": "js in hindi",
+//     "price": "free"
+// }    // JSON
+// [
+//     {},
+//     {},
+//     {}
+// ]       // JSON Format
