@@ -32,3 +32,29 @@ function loginInUserMessage(username = "Sam"){
 }
 console.log(loginInUserMessage("Piyush"));
 console.log(loginInUserMessage());
+
+function calculateCartPrice(val1, val2, ...num1){  // ... is called rest/spread operator based on their use-case.
+    return num1;
+}
+console.log(calculateCartPrice(200, 400, 500, 2000));  // here val1 takes 200, val2 takes 400 and rest 2 values are stored in array because of rest operator.
+
+const user = {
+    username: "Piyush",
+    prices: 199  // type-checking is necessary in this condition of passing object in function.
+}
+
+function handleObject(anyObject){
+    console.log(`Username is ${anyObject.username} and price is ${anyObject.price} `); // displays price as undefined.
+}
+//handleObject(user);
+handleObject({
+    username: "Sam",
+    price: 399
+});
+
+const myNewArray = [200, 400, 100, 600];
+function returnSecondValue(getArray){  // passing array through function.
+    return getArray[1];
+}
+//console.log(returnSecondValue(myNewArray));
+console.log(returnSecondValue([200, 400, 500, 100]));
