@@ -40,3 +40,6 @@ switch (month) {
         console.log("Default case match");
         break;
 }
+// Kind of a language flaw that even if a case matches, all the remaining cases are also executed un-necessarily.
+// In order to fix this, break keyword is used which stops execution once a case matches.
+// default case is executed if no cases match.
