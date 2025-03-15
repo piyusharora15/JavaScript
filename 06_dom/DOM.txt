@@ -1,0 +1,39 @@
+document.getElementById('title')
+// <h1 id="title" class="heading">DOM learning on Chai aur code</h1>
+// method to access the element via the 'title'
+
+document.getElementById('title').id      // 'title' 
+// gives the value of id.
+
+document.getElementById('title').class    // undefined
+
+document.getElementById('title').className  // 'heading'
+// when we use HTML inside javascript(jsx), we use className.
+
+document.getElementById('title').getAttribute('id')   // 'title'
+document.getElementById('title').getAttribute('class')   // 'heading'
+
+document.getElementById('title').setAttribute('class', 'test')  // this will overwrite in the original code.
+
+document.getElementById('title').setAttribute('class','test heading') //this will update the attribute in the original code.
+
+const title = document.getElementById('title');  // for easy access.
+
+title.style.backgroundColor = 'green' // 'green' color is implemented
+title.style.padding = "15px";       // '15px'
+title.style.borderRadius = "15px"  //'15px'
+
+title.textContent   // 'DOM learning on Chai aur code'
+title.innerHTML     // 'DOM learning on Chai aur code'
+title.innerText     // 'DOM learning on Chai aur code'
+
+innerHTML: returns all HTML nodes.  // shows all the HTML content.
+textContent: returns all text content.  // shows all the content, even those that have been removed using some display features.
+innerText: gives the text in the selected node.  // only shows the text that is currently visible.
+
+// innerText and textContent doesn't support HTML tags.
+
+// document.getElementsByClassName('heading')   // returns a HTML Collection.
+
+document.querySelector('h1') // selects the first 'h1' on the page and returns it.
+// <h1 id="title" class="heading">...</h1>
