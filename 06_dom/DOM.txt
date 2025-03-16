@@ -37,3 +37,22 @@ innerText: gives the text in the selected node.  // only shows the text that is 
 
 document.querySelector('h1') // selects the first 'h1' on the page and returns it.
 // <h1 id="title" class="heading">...</h1>
+
+document.querySelector('#title');
+// <h1 id="title" class="heading">DOM Learning on Chai aur Code <span style="display: none;">test text</span></h1>
+
+document.querySelector('.heading');
+// <h1 id="title" class="heading">DOM Learning on Chai aur Code <span style="display: none;">test text</span></h1>
+
+document.querySelector('input[type="password"]')
+// input tag is selected.
+
+document.querySelector('ul')
+// selects the entire unordered list.
+const myul = document.querySelector('ul')
+myul.querySelector('li')
+// selects the first list.
+const turnGreen = myul.querySelector('li')
+turnGreen.style.backgroundColor = "green"  // changes bg-colour to green.
+turnGreen.style.padding = "10px"  // sets padding to 10px
+turnGreen.innerText = "five"  // changes innerText to "five"
