@@ -58,6 +58,16 @@ turnGreen.style.padding = "10px"  // sets padding to 10px
 turnGreen.innerText = "five"  // changes innerText to "five"
 const tempList = document.querySelectorAll('li')   // gives a NodeList.
 tempList[0].style.color = 'green'  // changes color of list 0 i.e. "one" to green.
-// querySelectorAll returns a NodeList, so to access it we need to specify which element we want to manipulate.
+// querySelectorAll returns a static NodeList where any changes in the DOM do not affect the content of the collection. So to access it we need to specify which element we want to manipulate.
 const myH1 = document.querySelectorAll('h1')
 myH1[0].style.color = 'green'  // changes color to green
+
+document.getElementsByClassName('list-item')
+// gives a HTMLCollection.
+// If we want to apply array's properties on HTMLCollection, we need to first convert it to an array.
+const tempClassList = document.getElementsByClassName('list-item')
+const myConvertedArray = Array.from(tempClassList) // converts HTMLCollection to array.
+myConvertedArray.forEach(function(li){
+    li.style.color = 'orange'
+})     // now we can use array's properties, here using forEach changes color to 'orange'
+// Although NodeList is not an Array, it is possible to iterate over it with forEach(). It can also be converted to a real Array using Array.from().
